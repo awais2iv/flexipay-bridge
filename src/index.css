@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,12 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Presentation specific styles */
+@layer components {
+  .slide-container {
+    height: calc(100vh - 12rem);
   }
 }
