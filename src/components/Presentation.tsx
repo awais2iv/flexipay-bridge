@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 import { useState, ReactNode } from "react";
 
 type PresentationProps = {
@@ -23,19 +23,41 @@ export const Presentation = ({ slides, title }: PresentationProps) => {
     }
   };
 
+  // Function to handle keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowRight') {
+      handleNext();
+    } else if (e.key === 'ArrowLeft') {
+      handlePrevious();
+    }
+  };
+
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-100 to-blue-100">
+    <div 
+      className="flex flex-col min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
       <header className="bg-flexipay-primary text-white py-4 px-6 shadow-md">
-        <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl md:text-3xl font-bold">{title}</h1>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-white hover:bg-blue-700"
+          >
+            <Download className="h-4 w-4 mr-2" /> Export
+          </Button>
+        </div>
       </header>
       
-      <main className="flex-1 p-4 md:p-6 flex flex-col">
+      <main className="flex-1 p-4 md:p-6 flex flex-col container mx-auto">
         <div className="flex-1 py-4">
           {slides[currentSlide]}
         </div>
         
         <div className="flex justify-between items-center mt-4">
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-500 bg-white px-3 py-1 rounded-full shadow-sm">
             Slide {currentSlide + 1} of {slides.length}
           </div>
           <div className="flex gap-2">
@@ -44,6 +66,7 @@ export const Presentation = ({ slides, title }: PresentationProps) => {
               size="sm"
               onClick={handlePrevious}
               disabled={currentSlide === 0}
+              className="border-flexipay-primary text-flexipay-primary hover:bg-blue-50"
             >
               <ChevronLeft className="h-4 w-4 mr-1" /> Previous
             </Button>
@@ -58,6 +81,10 @@ export const Presentation = ({ slides, title }: PresentationProps) => {
           </div>
         </div>
       </main>
+      
+      <footer className="bg-white border-t border-slate-200 py-2 text-center text-xs text-gray-500">
+        FlexiPay Bridge Project • {new Date().getFullYear()}
+      </footer>
     </div>
   );
 };

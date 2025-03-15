@@ -22,7 +22,7 @@ export const Slide = ({
       className
     )}>
       <h2 className={cn(
-        "text-2xl md:text-3xl font-bold mb-4 text-flexipay-primary border-b-2 border-flexipay-accent pb-2",
+        "text-2xl md:text-3xl font-bold mb-6 text-flexipay-primary border-b-2 border-flexipay-accent pb-2",
         titleClassName
       )}>
         {title}

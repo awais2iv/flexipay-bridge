@@ -4,6 +4,7 @@ import { Slide } from "@/components/Slide";
 import { BulletPoint } from "@/components/BulletPoint";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { ModuleCard } from "@/components/ModuleCard";
+import { CheckCircle, BarChart3, Briefcase, Notebook, Code, Building, Users } from "lucide-react";
 
 const Index = () => {
   const comparisonData = [
@@ -14,130 +15,80 @@ const Index = () => {
     },
     {
       application: "Jazz Cash, Easypaisa, Wallet",
-      weakness: "A Mobile wallet No credit based purchasing for daily needs.",
-      solution: "Credit facility for salaried individuals & low-income users to purchase essentials."
+      weakness: "A Mobile wallet with no credit-based purchasing for daily needs",
+      solution: "Credit facility for salaried individuals & low-income users to purchase essentials"
     },
     {
       application: "Keenu POS",
-      weakness: "Limited to cash/card payments.",
-      solution: "Supports multiple payment methods, including biometric transactions."
+      weakness: "Limited to cash/card payments",
+      solution: "Supports multiple payment methods, including biometric transactions"
     },
     {
       application: "BaadMay, Alif Shop",
       weakness: "Integrates with other brands already present on internet through their platform",
-      solution: "Combines online product listing with in-store Management system including POS capabilities and advanced analytics to boost reach."
+      solution: "Combines online product listing with in-store Management system including POS capabilities and analytics"
     }
   ];
 
   const modules = [
     {
       title: "Authentication & Authorization",
+      icon: <Users className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
         "Login and Signup of Users, Businesses, and Organizations",
-        "Separation of functionality based on roles."
-      ]
+        "Separation of functionality based on roles"
+      ],
+      team: "Team Member 1"
     },
     {
-      title: "Businesses Management",
+      title: "Business & User Management",
+      icon: <Building className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
-        "Management of Users that register as businesses",
-        "Assessment based on the user reviews"
-      ]
+        "Management of business profiles and assessment",
+        "User management and performance tracking",
+        "Spending pattern analysis"
+      ],
+      team: "Team Member 2"
     },
     {
-      title: "User Management",
+      title: "Inventory & Sales Management",
+      icon: <BarChart3 className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
-        "Management of Users",
-        "Performance assessment based on spending patterns"
-      ]
+        "Product inventory and listings",
+        "Reports generation and analytics",
+        "Sales transactions and order processing"
+      ],
+      team: "Team Member 1"
     },
     {
-      title: "Inventory Management",
+      title: "Financial Management Suite",
+      icon: <Briefcase className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
-        "Manages and tracks product inventory and listings.",
-        "Generation of Reports"
-      ]
+        "Expense tracking and budget management",
+        "Credit and installment systems",
+        "Wallet functionality and transaction tracking"
+      ],
+      team: "Team Member 3"
     },
     {
-      title: "Sales Management",
+      title: "POS & Online Integration",
+      icon: <Notebook className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
-        "Oversees sales transactions and order processing."
-      ]
+        "Integrated POS system for physical stores",
+        "Online storefront with existing inventory",
+        "Biometric payment processing"
+      ],
+      team: "Team Member 2"
     },
     {
-      title: "Expense Management",
+      title: "Customer Experience",
+      icon: <CheckCircle className="w-5 h-5 text-flexipay-primary mb-2" />,
       features: [
-        "Monitors operational expenses and budget tracking."
-      ]
-    },
-    {
-      title: "Supplier Management",
-      features: [
-        "Management of Suppliers",
-        "Creation of orders to suppliers"
-      ]
-    },
-    {
-      title: "Credit Management",
-      features: [
-        "Management of daybook for businesses",
-        "Credit Management for the users"
-      ]
-    },
-    {
-      title: "Instalment Management",
-      features: [
-        "Creation of Instalment Plans",
-        "Return and management of instalments"
-      ]
-    },
-    {
-      title: "Wallet Management",
-      features: [
-        "Management of mobile wallet",
-        "Tracking of transactions",
-        "Generation of account statements"
-      ]
-    },
-    {
-      title: "Profile Management",
-      features: [
-        "Management of Profile",
-        "Update of Personal, financial information"
-      ]
-    },
-    {
-      title: "Budget Management",
-      features: [
-        "Management of Budgets",
-        "Spending control based on budget allocation"
-      ]
-    },
-    {
-      title: "Loyalty Rewards",
-      features: [
-        "Incentivizes repeat purchases through rewards and loyalty points."
-      ]
-    },
-    {
-      title: "POS System",
-      features: [
-        "Development of POS system",
-        "Integration with reports generation for inventory"
-      ]
-    },
-    {
-      title: "Personalized Recommendations",
-      features: [
-        "Tailored recommendations based on user spending patterns."
-      ]
-    },
-    {
-      title: "Customer Support",
-      features: [
-        "Development of Help Desk for user queries",
-        "Dispute Resolution for Admin"
-      ]
+        "Personalized recommendations engine",
+        "Loyalty rewards system",
+        "Customer support and helpdesk"
+      ],
+      team: "Team Member 3"
     }
   ];
 
@@ -146,245 +97,397 @@ const Index = () => {
     <Slide 
       key="title" 
       title="FlexiPay Bridge"
-      className="bg-gradient-to-br from-flexipay-light to-blue-100 justify-center items-center text-center"
-      titleClassName="text-4xl md:text-5xl mb-6 border-none"
+      className="bg-gradient-to-br from-blue-50 to-indigo-100 justify-center items-center text-center"
+      titleClassName="text-4xl md:text-6xl mb-8 border-none text-flexipay-primary font-bold"
     >
-      <div className="space-y-4">
+      <div className="space-y-6">
         <p className="text-2xl md:text-3xl text-flexipay-dark font-medium mb-8">
           Bridging The Gap Between Traditional Retail & Modern E-Commerce
         </p>
         <p className="text-lg text-flexipay-dark/80 italic">
           Buy Now, Pay Later Solution for Business Growth
         </p>
+        <p className="text-md text-flexipay-dark/60 mt-12">
+          Final Year Project Proposal
+        </p>
       </div>
     </Slide>,
 
-    // Introduction Slide
-    <Slide key="intro" title="Introduction">
-      <div className="space-y-4">
-        <p className="text-lg">
-          In today's digital landscape, businesses face a growing divide:
+    // 1. Introduction Slide
+    <Slide key="intro" title="1. Introduction" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-6">
+        <p className="text-lg leading-relaxed">
+          In today's digital landscape, businesses face a significant growth divide:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
-          <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-            <h3 className="font-semibold text-green-700 mb-2">Digital Adopters</h3>
-            <p>Experiencing substantial financial gains through expanded reach and digital efficiency.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-8">
+          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
+            <h3 className="font-semibold text-green-700 mb-3 text-xl">Digital Adopters</h3>
+            <p className="text-gray-700">Experiencing substantial financial gains through expanded reach and digital efficiency.</p>
           </div>
-          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-            <h3 className="font-semibold text-red-700 mb-2">Digital Laggards</h3>
-            <p>Facing challenges including reduced market share and lower customer engagement.</p>
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 shadow-sm">
+            <h3 className="font-semibold text-red-700 mb-3 text-xl">Digital Laggards</h3>
+            <p className="text-gray-700">Facing reduced market share, lower customer engagement, and limited growth potential.</p>
           </div>
         </div>
-        <BulletPoint>
-          <span className="font-medium">85% of consumers</span> research products online before purchasing
-        </BulletPoint>
-        <BulletPoint>
-          Many Pakistani businesses struggle to establish online presence due to limited resources
-        </BulletPoint>
-        <BulletPoint>
-          A significant portion of Pakistan's population faces economic hardships
-        </BulletPoint>
-        <div className="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
-          <p className="font-medium text-flexipay-primary">
+        <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
+          <h3 className="font-semibold text-flexipay-primary mb-3 text-xl">Key Market Insights</h3>
+          <BulletPoint className="mb-3">
+            <span className="font-medium">85% of consumers</span> research products online before making any purchase
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            Many Pakistani businesses struggle to establish online presence due to limited resources and technical expertise
+          </BulletPoint>
+          <BulletPoint>
+            A significant portion of Pakistan's population faces economic hardships, making it difficult to afford basic necessities
+          </BulletPoint>
+        </div>
+        <div className="mt-6 bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 shadow-sm">
+          <p className="font-medium text-flexipay-primary leading-relaxed">
             FlexiPay bridges this gap by empowering traditional retail businesses with integrated online presence and providing a "buy now, pay later" solution for salaried consumers.
           </p>
         </div>
       </div>
     </Slide>,
 
-    // Problem Statement
-    <Slide key="problem" title="Problem Statement">
-      <div className="space-y-4">
-        <div className="bg-amber-50 p-4 rounded-lg border border-amber-200 mb-6">
-          <h3 className="font-semibold text-amber-700 mb-2">Business Challenges</h3>
-          <BulletPoint>
-            Businesses struggle to increase sales from a single platform
+    // 2. Problem Statement
+    <Slide key="problem" title="2. Problem Statement" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-6">
+        <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm mb-6">
+          <h3 className="font-semibold text-amber-700 mb-3 text-xl">Business Challenges</h3>
+          <BulletPoint className="mb-3">
+            Traditional retailers struggle to increase sales through a single platform, limiting growth potential
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            Online presence is currently too complex and expensive to establish and maintain
           </BulletPoint>
           <BulletPoint>
-            Online presence is currently too hectic and expensive to maintain
-          </BulletPoint>
-          <BulletPoint>
-            Limited scalability and customer growth without digital integration
-          </BulletPoint>
-        </div>
-        
-        <div className="bg-purple-50 p-4 rounded-lg border border-purple-200 mb-6">
-          <h3 className="font-semibold text-purple-700 mb-2">Consumer Challenges</h3>
-          <BulletPoint>
-            Middle-class salaried consumers struggle to buy essentials at month-end
-          </BulletPoint>
-          <BulletPoint>
-            Financial limitations lead to high-interest loans to fulfill basic needs
+            Limited scalability and customer growth without digital integration in today's market
           </BulletPoint>
         </div>
         
-        <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
-          <h3 className="font-semibold text-emerald-700 mb-2">Payment System Challenges</h3>
-          <BulletPoint>
-            Lack of centralized payment solutions leads to processing delays
+        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500 shadow-sm mb-6">
+          <h3 className="font-semibold text-purple-700 mb-3 text-xl">Consumer Challenges</h3>
+          <BulletPoint className="mb-3">
+            Middle-class salaried consumers struggle to purchase essentials at month-end due to cash flow issues
           </BulletPoint>
           <BulletPoint>
-            Restrictive terms and conditions hinder efficient cash flow management
+            Financial limitations lead to high-interest loans for basic needs, creating debt cycles
+          </BulletPoint>
+        </div>
+        
+        <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500 shadow-sm">
+          <h3 className="font-semibold text-emerald-700 mb-3 text-xl">Payment System Challenges</h3>
+          <BulletPoint className="mb-3">
+            Lack of centralized payment solutions leads to processing delays and inefficiencies
+          </BulletPoint>
+          <BulletPoint>
+            Restrictive terms and conditions hinder efficient cash flow management for both businesses and consumers
           </BulletPoint>
         </div>
       </div>
     </Slide>,
 
-    // Solution
-    <Slide key="solution" title="Solution & Objectives">
+    // 3. Literature Review
+    <Slide key="literature" title="3. Literature Review" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-4">
+        <p className="text-lg mb-4">Comparative analysis of existing solutions in the market:</p>
+        <ComparisonTable data={comparisonData} className="shadow-sm" />
+        
+        <div className="mt-8 bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
+          <h3 className="font-semibold text-flexipay-primary mb-3 text-xl">Key Market Research Findings</h3>
+          <BulletPoint className="mb-3">
+            <span className="font-medium">Digital transformation</span> is crucial for business survival in the post-pandemic economy
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            <span className="font-medium">Buy now, pay later</span> solutions have seen 85% growth in adoption rates globally
+          </BulletPoint>
+          <BulletPoint>
+            <span className="font-medium">Hybrid retail models</span> combining physical and digital presence show 40% higher retention rates
+          </BulletPoint>
+        </div>
+      </div>
+    </Slide>,
+
+    // 4. Problem Solution
+    <Slide key="solution" title="4. Problem Solution" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
-        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-          <h3 className="font-semibold text-flexipay-primary mb-2">FlexiPay Solution</h3>
-          <BulletPoint>
-            Digital storefront for direct customer connection
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
+          <h3 className="font-semibold text-flexipay-primary mb-3 text-xl">FlexiPay Solution Framework</h3>
+          <BulletPoint className="mb-3">
+            Comprehensive digital storefront enabling direct customer connections
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            POS-integrated online store with complete inventory management system
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            Buy now, pay later feature with credit functionality for salaried consumers
+          </BulletPoint>
+          <BulletPoint className="mb-3">
+            Advanced biometric payment system for seamless and secure transactions
           </BulletPoint>
           <BulletPoint>
-            POS-integrated online store and management system
-          </BulletPoint>
-          <BulletPoint>
-            Buy now, pay later feature with credit functionality
-          </BulletPoint>
-          <BulletPoint>
-            Biometric payment system for seamless transactions
-          </BulletPoint>
-          <BulletPoint>
-            Personalized recommendations based on spending patterns
+            AI-powered personalized recommendations based on customer spending patterns
           </BulletPoint>
         </div>
         
-        <h3 className="font-semibold text-lg text-flexipay-dark mt-4">Key Objectives</h3>
+        <h3 className="font-semibold text-lg text-flexipay-dark mt-6">Strategic Objectives</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
-            <h4 className="font-semibold text-flexipay-primary mb-2">Digital Transformation</h4>
-            <p className="text-sm">Enhanced expense management system providing POS service</p>
+          <div className="bg-white p-5 rounded-lg border-t-4 border-flexipay-primary shadow-sm">
+            <h4 className="font-semibold text-flexipay-primary mb-2 text-lg">Digital Transformation</h4>
+            <p className="text-gray-700">Comprehensive management system with integrated POS service and online storefront</p>
           </div>
-          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
-            <h4 className="font-semibold text-flexipay-secondary mb-2">Personalized Experience</h4>
-            <p className="text-sm">Budget management with buy now pay later feature and recommendations</p>
+          <div className="bg-white p-5 rounded-lg border-t-4 border-flexipay-secondary shadow-sm">
+            <h4 className="font-semibold text-flexipay-secondary mb-2 text-lg">Financial Inclusion</h4>
+            <p className="text-gray-700">Budget management with buy now pay later feature for broader consumer access</p>
           </div>
-          <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
-            <h4 className="font-semibold text-flexipay-accent mb-2">Sustainable Development</h4>
-            <p className="text-sm">Contributing to UN Sustainable Development Goals</p>
-          </div>
-        </div>
-      </div>
-    </Slide>,
-
-    // Competitive Analysis
-    <Slide key="comparison" title="Competitive Analysis">
-      <ComparisonTable data={comparisonData} />
-    </Slide>,
-
-    // Scope
-    <Slide key="scope" title="Project Scope">
-      <div className="space-y-4">
-        <p>The scope encompasses solutions for both business owners and users:</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-            <h3 className="font-semibold text-flexipay-primary mb-2">For Businesses</h3>
-            <BulletPoint>Web-based POS system for effective management</BulletPoint>
-            <BulletPoint>Online storefront from existing inventory</BulletPoint>
-            <BulletPoint>Management of daybook for loyal customers</BulletPoint>
-            <BulletPoint>Transaction histories and performance reports</BulletPoint>
-            <BulletPoint>Multiple payment methods including biometric</BulletPoint>
-            <BulletPoint>B2B model for direct supplier connections</BulletPoint>
-          </div>
-          
-          <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-            <h3 className="font-semibold text-green-700 mb-2">For Users</h3>
-            <BulletPoint>Mobile wallet with built-in online store</BulletPoint>
-            <BulletPoint>Access to daily household and healthcare products</BulletPoint>
-            <BulletPoint>Personalized recommendations based on spending</BulletPoint>
-            <BulletPoint>Buy now, pay later with credit feature</BulletPoint>
-            <BulletPoint>Flexible payment options including biometric</BulletPoint>
+          <div className="bg-white p-5 rounded-lg border-t-4 border-flexipay-accent shadow-sm">
+            <h4 className="font-semibold text-flexipay-accent mb-2 text-lg">Sustainable Growth</h4>
+            <p className="text-gray-700">Contributing to economic development and UN Sustainable Development Goals</p>
           </div>
         </div>
-        
-        <div className="mt-4 p-4 bg-slate-50 rounded-lg border border-slate-200">
-          <p className="text-slate-700">
-            <span className="font-medium">Timeline:</span> 1-1.5 years (FYP timeframe)
-          </p>
-          <p className="text-slate-700 mt-2">
-            <span className="font-medium">Technologies:</span> React, Node.js (Web Application) and Flutter (Mobile App)
+
+        <div className="mt-6 bg-indigo-50 p-5 rounded-lg border border-indigo-200 shadow-sm">
+          <h3 className="font-semibold text-flexipay-primary mb-3 text-xl">Scope & Timeline</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-medium text-flexipay-dark">For Businesses:</h4>
+              <BulletPoint className="mb-1 text-sm">Integrated POS and online storefront</BulletPoint>
+              <BulletPoint className="mb-1 text-sm">Comprehensive inventory management</BulletPoint>
+              <BulletPoint className="text-sm">Multiple payment processing options</BulletPoint>
+            </div>
+            <div>
+              <h4 className="font-medium text-flexipay-dark">For Consumers:</h4>
+              <BulletPoint className="mb-1 text-sm">Mobile wallet with credit functionality</BulletPoint>
+              <BulletPoint className="mb-1 text-sm">Personalized shopping recommendations</BulletPoint>
+              <BulletPoint className="text-sm">Flexible payment options and loyalty rewards</BulletPoint>
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-gray-600">
+            <span className="font-medium">Project Timeline:</span> 12-18 months (Final Year Project timeframe)
           </p>
         </div>
       </div>
     </Slide>,
 
-    // Modules
-    <Slide key="modules" title="System Modules">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {modules.map((module, index) => (
-          <ModuleCard
-            key={index}
-            title={module.title}
-            features={module.features}
-          />
-        ))}
-      </div>
-    </Slide>,
-
-    // Limitations
-    <Slide key="limitations" title="System Limitations & Constraints">
+    // 5. Modules and Work Division
+    <Slide key="modules" title="5. Modules and Work Division" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-4">
-        <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
-          <BulletPoint>
-            <span className="font-medium">Internet Availability:</span> System requires internet connectivity to function
-          </BulletPoint>
-          <BulletPoint>
-            <span className="font-medium">Hardware Compatibility:</span> Compatible hardware needed for biometric payments
-          </BulletPoint>
-          <BulletPoint>
-            <span className="font-medium">Third-party Dependencies:</span> Potential downtime and restrictions from service providers
-          </BulletPoint>
+        <p className="text-lg mb-4">The system is organized into the following core modules with team assignments:</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {modules.map((module, index) => (
+            <div key={index} className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center mb-3">
+                {module.icon}
+                <h3 className="font-semibold text-flexipay-primary text-center">{module.title}</h3>
+              </div>
+              <ul className="text-sm space-y-2">
+                {module.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <span className="text-flexipay-secondary mr-2">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 pt-2 border-t border-slate-100">
+                <p className="text-xs text-gray-500"><span className="font-medium">Assigned to:</span> {module.team}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </Slide>,
 
-    // Data Gathering & Technologies
-    <Slide key="technologies" title="Data Gathering & Technologies">
+    // 6. Tools and Technologies
+    <Slide key="technologies" title="6. Tools and Technologies" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
-        <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
-          <h3 className="font-semibold text-flexipay-dark mb-3">Data Gathering Approach</h3>
-          <p>To acquire information for FlexiPay, we will employ:</p>
-          <BulletPoint>Interviews with small-scale businesses like wholesale retailers and shopping marts</BulletPoint>
-          <BulletPoint>Questionnaires for already established brands</BulletPoint>
-          <BulletPoint>Surveys targeting employed users including salaried and non-salaried users</BulletPoint>
-        </div>
-        
-        <h3 className="font-semibold text-lg text-flexipay-dark mt-4">Technologies</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-4 rounded-lg border border-blue-200 shadow-sm">
-            <h4 className="font-semibold text-flexipay-primary mb-2">Frontend</h4>
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-              <p>React JS (Web)</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200 shadow-sm">
+            <div className="flex justify-center mb-4">
+              <Code className="h-12 w-12 text-blue-600" />
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-blue-400"></div>
-              <p>Flutter (Mobile)</p>
+            <h3 className="font-semibold text-blue-700 mb-3 text-xl text-center">Frontend Technologies</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-3 rounded-lg border border-blue-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-blue-500 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">React.js</p>
+                  <p className="text-xs text-gray-500">Web Application Interface</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-blue-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-blue-400 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Tailwind CSS</p>
+                  <p className="text-xs text-gray-500">Styling Framework</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-blue-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-blue-300 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Flutter</p>
+                  <p className="text-xs text-gray-500">Mobile Application</p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="bg-white p-4 rounded-lg border border-green-200 shadow-sm">
-            <h4 className="font-semibold text-green-700 mb-2">Backend</h4>
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <p>Node.js</p>
+          <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200 shadow-sm">
+            <div className="flex justify-center mb-4">
+              <Briefcase className="h-12 w-12 text-green-600" />
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-green-400"></div>
-              <p>Express.js</p>
+            <h3 className="font-semibold text-green-700 mb-3 text-xl text-center">Backend Technologies</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-3 rounded-lg border border-green-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-green-500 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Node.js</p>
+                  <p className="text-xs text-gray-500">Server Runtime Environment</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-green-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-green-400 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Express.js</p>
+                  <p className="text-xs text-gray-500">Web Application Framework</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-green-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-green-300 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">REST APIs</p>
+                  <p className="text-xs text-gray-500">For System Integration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200 shadow-sm">
+            <div className="flex justify-center mb-4">
+              <BarChart3 className="h-12 w-12 text-purple-600" />
+            </div>
+            <h3 className="font-semibold text-purple-700 mb-3 text-xl text-center">Database & Tools</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-3 rounded-lg border border-purple-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-purple-500 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">MongoDB</p>
+                  <p className="text-xs text-gray-500">NoSQL Database</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-purple-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-purple-400 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Git & GitHub</p>
+                  <p className="text-xs text-gray-500">Version Control</p>
+                </div>
+              </div>
+              <div className="bg-white p-3 rounded-lg border border-purple-200 flex items-center">
+                <div className="w-3 h-3 rounded-full bg-purple-300 mr-3"></div>
+                <div>
+                  <p className="font-medium text-gray-800">Figma</p>
+                  <p className="text-xs text-gray-500">UI/UX Design</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         
-        <div className="bg-white p-4 rounded-lg border border-purple-200 shadow-sm">
-          <h4 className="font-semibold text-purple-700 mb-2">Database</h4>
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-            <p>MongoDB (NoSQL)</p>
+        <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm mt-6">
+          <h3 className="font-semibold text-flexipay-dark mb-3 text-xl">Data Gathering Approach</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded-lg border border-slate-200">
+              <h4 className="font-medium text-flexipay-primary mb-2">Interviews</h4>
+              <p className="text-sm text-gray-700">With small-scale businesses like wholesale retailers and shopping marts</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-slate-200">
+              <h4 className="font-medium text-flexipay-primary mb-2">Questionnaires</h4>
+              <p className="text-sm text-gray-700">For established brands and potential business users</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-slate-200">
+              <h4 className="font-medium text-flexipay-primary mb-2">Surveys</h4>
+              <p className="text-sm text-gray-700">Targeting employed users including salaried and non-salaried consumers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Slide>,
+
+    // 7. Mockups
+    <Slide key="mockups" title="7. Mockups" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-6">
+        <p className="text-lg mb-6">Preliminary interface designs for key system components:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-slate-100 p-3 border-b border-slate-200">
+              <h3 className="font-medium text-flexipay-primary">Business Dashboard</h3>
+            </div>
+            <div className="p-4 h-64 flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100">
+              <p className="text-gray-400 text-center">
+                [Mockup image to be added]<br/>
+                <span className="text-sm">Sales analytics and inventory management interface</span>
+              </p>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-slate-100 p-3 border-b border-slate-200">
+              <h3 className="font-medium text-flexipay-primary">Mobile Wallet</h3>
+            </div>
+            <div className="p-4 h-64 flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100">
+              <p className="text-gray-400 text-center">
+                [Mockup image to be added]<br/>
+                <span className="text-sm">User wallet with credit features and transaction history</span>
+              </p>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-slate-100 p-3 border-b border-slate-200">
+              <h3 className="font-medium text-flexipay-primary">POS System</h3>
+            </div>
+            <div className="p-4 h-64 flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100">
+              <p className="text-gray-400 text-center">
+                [Mockup image to be added]<br/>
+                <span className="text-sm">Integrated point-of-sale system with biometric payment options</span>
+              </p>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+            <div className="bg-slate-100 p-3 border-b border-slate-200">
+              <h3 className="font-medium text-flexipay-primary">Online Storefront</h3>
+            </div>
+            <div className="p-4 h-64 flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100">
+              <p className="text-gray-400 text-center">
+                [Mockup image to be added]<br/>
+                <span className="text-sm">Customer-facing marketplace with personalized recommendations</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm mt-4">
+          <h3 className="font-semibold text-flexipay-primary mb-3">System Limitations & Constraints</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <BulletPoint className="mb-2">
+              <div>
+                <span className="font-medium">Internet Connectivity:</span>
+                <p className="text-sm text-gray-600">System requires stable internet connection to function</p>
+              </div>
+            </BulletPoint>
+            <BulletPoint className="mb-2">
+              <div>
+                <span className="font-medium">Hardware Requirements:</span>
+                <p className="text-sm text-gray-600">Compatible devices needed for biometric authentication</p>
+              </div>
+            </BulletPoint>
+            <BulletPoint>
+              <div>
+                <span className="font-medium">Third-party Dependencies:</span>
+                <p className="text-sm text-gray-600">Reliance on external payment processors and APIs</p>
+              </div>
+            </BulletPoint>
           </div>
         </div>
       </div>
@@ -394,8 +497,8 @@ const Index = () => {
     <Slide 
       key="thankyou" 
       title="Thank You"
-      className="bg-gradient-to-br from-flexipay-light to-blue-100 justify-center items-center text-center"
-      titleClassName="text-3xl md:text-4xl mb-6 border-none"
+      className="bg-gradient-to-br from-blue-50 to-indigo-100 justify-center items-center text-center"
+      titleClassName="text-3xl md:text-4xl mb-6 border-none font-bold text-flexipay-primary"
     >
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-flexipay-dark">
@@ -404,6 +507,11 @@ const Index = () => {
         <p className="text-lg text-flexipay-dark/80">
           Empowering businesses and consumers with integrated digital solutions
         </p>
+        <div className="mt-8 text-sm text-gray-600">
+          <p>Team Members: [Names]</p>
+          <p>Supervisor: [Name]</p>
+          <p>Department of Computer Science</p>
+        </div>
       </div>
     </Slide>
   ];
