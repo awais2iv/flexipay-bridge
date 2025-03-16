@@ -191,14 +191,14 @@ const Index = () => {
     <Slide key="problem-1" title="2. Problem Statement (Business Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm">
-          <p className="text-gray-800 leading-relaxed mb-4">
-            Traditional retailers in Pakistan are facing significant operational challenges in today's digital economy. Many businesses struggle to increase their sales through a single platform, which substantially limits their growth potential and market reach. The current market offers few integrated solutions that can serve both physical and online sales channels simultaneously.
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Traditional retailers face limited growth potential through single-platform sales channels, unable to effectively reach broader markets or expand their customer base.
           </p>
-          <p className="text-gray-800 leading-relaxed mb-4">
-            Establishing and maintaining an online marketplace presence has proven to be prohibitively complex and expensive for small to medium businesses. The technical expertise required, ongoing maintenance costs, and integration challenges create significant barriers to digital adoption, leaving many businesses unable to compete effectively in the online space.
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Establishing an online marketplace remains prohibitively complex and expensive for small to medium businesses, creating significant barriers to digital transformation.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Without proper digital integration in today's market, these businesses face severe limitations in scalability and customer growth. Furthermore, inefficient inventory and sales management systems lead to operational inefficiencies, stock discrepancies, and missed sales opportunities. Many businesses also struggle with proper income and expense management, lacking tools to effectively track financial performance and make data-driven decisions.
+            Many businesses struggle with inefficient inventory management, inadequate sales tracking, and poor financial oversight, leading to missed opportunities and operational inefficiencies.
           </p>
         </div>
       </div>
@@ -208,17 +208,14 @@ const Index = () => {
     <Slide key="problem-2" title="2. Problem Statement (Consumer Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500 shadow-sm">
-          <p className="text-gray-800 leading-relaxed mb-4">
-            Pakistan's middle-class salaried consumers often struggle to purchase essential goods due to inconsistent cash flow and limited income. These financial constraints become particularly acute at month-end before receiving their next salary, creating cycles of hardship for families trying to meet basic needs.
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Middle-class salaried consumers often struggle with essential purchases due to income constraints, particularly at month-end before their next paycheck.
           </p>
-          <p className="text-gray-800 leading-relaxed mb-4">
-            When faced with financial shortfalls, many consumers are forced to rely on high-interest loans or informal credit systems to cover essential purchases. This dependency creates damaging debt cycles that can be difficult to escape, further compounding financial instability and reducing future purchasing power.
-          </p>
-          <p className="text-gray-800 leading-relaxed mb-4">
-            Consumers also face significant challenges in finding the best prices and deals across fragmented marketplaces. The time and effort required to compare options across multiple physical and online stores often leads to suboptimal purchasing decisions and unnecessary expenditure.
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Financial limitations lead many to rely on high-interest loans for basic needs, creating damaging debt cycles that further reduce purchasing power.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Most consumers lack effective tools for expense and budget management, making it difficult to track spending patterns or make informed financial decisions. Additionally, many face limited shopping options for essential goods, particularly in underserved areas where retail options are restricted and online delivery services are inadequate.
+            Consumers face challenges in price comparison, budget management, and access to essential goods, particularly in underserved areas with limited retail options.
           </p>
         </div>
       </div>
