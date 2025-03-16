@@ -93,11 +93,6 @@ const Index = () => {
 
   const sustainableGoals = [
     {
-      goal: "No Poverty",
-      icon: <HeartHandshake className="h-8 w-8 text-red-500" />,
-      description: "Financial inclusion through credit facilities helps low-income individuals meet their needs without falling into debt traps."
-    },
-    {
       goal: "Zero Hunger",
       icon: <Wheat className="h-8 w-8 text-amber-500" />,
       description: "Ensuring access to essential food items during financial shortfalls through the buy-now-pay-later feature."
@@ -111,16 +106,6 @@ const Index = () => {
       goal: "Industry, Innovation and Infrastructure",
       icon: <Zap className="h-8 w-8 text-purple-500" />,
       description: "Building resilient digital infrastructure and promoting inclusive industrial development through technology."
-    },
-    {
-      goal: "Sustainable Cities and Communities",
-      icon: <Users2 className="h-8 w-8 text-green-500" />,
-      description: "Promoting sustainable consumption patterns through better budget management and financial planning."
-    },
-    {
-      goal: "Climate Action",
-      icon: <TreePine className="h-8 w-8 text-emerald-500" />,
-      description: "Reducing carbon footprint through optimized inventory management and digital transactions that minimize physical travel."
     }
   ];
 
@@ -309,7 +294,7 @@ const Index = () => {
           FlexiPay Bridge contributes directly to several United Nations Sustainable Development Goals, aligning our business objectives with global sustainability initiatives:
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {sustainableGoals.map((goal, index) => (
             <div key={index} className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex flex-col items-center mb-4">
