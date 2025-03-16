@@ -1,9 +1,9 @@
-
 import { Presentation } from "@/components/Presentation";
 import { Slide } from "@/components/Slide";
 import { BulletPoint } from "@/components/BulletPoint";
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { CheckCircle, BarChart3, Briefcase, Notebook, Code, Building, Users } from "lucide-react";
+import { ModuleCard } from "@/components/ModuleCard";
+import { CheckCircle, BarChart3, Briefcase, Notebook, Code, Building, Users, HeartHandshake, Zap, Wheat, Users2, Landmark, TreePine } from "lucide-react";
 
 const Index = () => {
   const comparisonData = [
@@ -91,6 +91,39 @@ const Index = () => {
     }
   ];
 
+  const sustainableGoals = [
+    {
+      goal: "No Poverty",
+      icon: <HeartHandshake className="h-8 w-8 text-red-500" />,
+      description: "Financial inclusion through credit facilities helps low-income individuals meet their needs without falling into debt traps."
+    },
+    {
+      goal: "Zero Hunger",
+      icon: <Wheat className="h-8 w-8 text-amber-500" />,
+      description: "Ensuring access to essential food items during financial shortfalls through the buy-now-pay-later feature."
+    },
+    {
+      goal: "Decent Work and Economic Growth",
+      icon: <Landmark className="h-8 w-8 text-blue-500" />,
+      description: "Empowering small businesses with digital tools promotes economic growth and formal employment opportunities."
+    },
+    {
+      goal: "Industry, Innovation and Infrastructure",
+      icon: <Zap className="h-8 w-8 text-purple-500" />,
+      description: "Building resilient digital infrastructure and promoting inclusive industrial development through technology."
+    },
+    {
+      goal: "Sustainable Cities and Communities",
+      icon: <Users2 className="h-8 w-8 text-green-500" />,
+      description: "Promoting sustainable consumption patterns through better budget management and financial planning."
+    },
+    {
+      goal: "Climate Action",
+      icon: <TreePine className="h-8 w-8 text-emerald-500" />,
+      description: "Reducing carbon footprint through optimized inventory management and digital transactions that minimize physical travel."
+    }
+  ];
+
   const slides = [
     // Title Slide
     <Slide 
@@ -154,7 +187,7 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 2. Problem Statement - Converted to narrative paragraphs
+    // 2. Problem Statement - Business Challenges
     <Slide key="problem-1" title="2. Problem Statement (Business Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm">
@@ -273,29 +306,47 @@ const Index = () => {
       </div>
     </Slide>,
 
+    // Add a new slide for UN Sustainable Development Goals
+    <Slide key="sdg" title="4.1 Contribution to UN Sustainable Development Goals" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-6">
+        <p className="text-lg">
+          FlexiPay Bridge contributes directly to several United Nations Sustainable Development Goals, aligning our business objectives with global sustainability initiatives:
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sustainableGoals.map((goal, index) => (
+            <div key={index} className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center mb-4">
+                {goal.icon}
+                <h3 className="font-semibold text-flexipay-primary text-center mt-2">{goal.goal}</h3>
+              </div>
+              <p className="text-sm text-gray-700">{goal.description}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500 shadow-sm mt-4">
+          <h3 className="font-semibold text-flexipay-primary mb-2">Long-term Impact</h3>
+          <p className="text-gray-700">
+            By aligning with these SDGs, FlexiPay Bridge aims to create a sustainable economic ecosystem that not only addresses immediate business and consumer challenges but also contributes to long-term socioeconomic development and environmental sustainability.
+          </p>
+        </div>
+      </div>
+    </Slide>,
+
     // 5. Modules and Work Division
     <Slide key="modules" title="5. Modules and Work Division" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-4">
         <p className="text-lg mb-4">The system is organized into the following core modules with team assignments:</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {modules.map((module, index) => (
-            <div key={index} className="bg-white p-5 rounded-lg border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex flex-col items-center mb-3">
-                {module.icon}
-                <h3 className="font-semibold text-flexipay-primary text-center">{module.title}</h3>
-              </div>
-              <ul className="text-sm space-y-2">
-                {module.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <span className="text-flexipay-secondary mr-2">•</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-3 pt-2 border-t border-slate-100">
-                <p className="text-xs text-gray-500"><span className="font-medium">Assigned to:</span> {module.team}</p>
-              </div>
-            </div>
+            <ModuleCard
+              key={index}
+              title={module.title}
+              features={module.features}
+              icon={module.icon}
+              team={module.team}
+            />
           ))}
         </div>
       </div>
