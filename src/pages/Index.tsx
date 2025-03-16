@@ -3,7 +3,6 @@ import { Presentation } from "@/components/Presentation";
 import { Slide } from "@/components/Slide";
 import { BulletPoint } from "@/components/BulletPoint";
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { ModuleCard } from "@/components/ModuleCard";
 import { CheckCircle, BarChart3, Briefcase, Notebook, Code, Building, Users } from "lucide-react";
 
 const Index = () => {
@@ -113,76 +112,81 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 1. Introduction Slide
+    // 1. Introduction Slide - Enhanced and expanded
     <Slide key="intro" title="1. Introduction" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <p className="text-lg leading-relaxed">
-          In today's digital landscape, businesses face a significant growth divide:
+          FlexiPay Bridge is a comprehensive digital transformation solution addressing multiple challenges in today's retail ecosystem:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 mb-8">
-          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 shadow-sm">
-            <h3 className="font-semibold text-green-700 mb-3 text-xl">Digital Adopters</h3>
-            <p className="text-gray-700">Experiencing substantial financial gains through expanded reach and digital efficiency.</p>
+        
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 shadow-sm mt-4">
+          <p className="text-gray-800 leading-relaxed mb-4">
+            In today's rapidly evolving digital landscape, businesses face a critical growth divide. A survey found that 85% of consumers research products online before making purchases, yet many Pakistani businesses struggle to establish an effective online presence due to resource constraints and technical barriers.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-4">
+            FlexiPay Bridge introduces a revolutionary approach that addresses multiple pain points in the current retail ecosystem. We tackle the operational inefficiencies of traditional point-of-sale systems, the challenges of inventory management across physical and digital channels, and the complexities of establishing an online marketplace.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Beyond business operations, our solution recognizes that a significant portion of Pakistan's population faces economic hardships with rising inflation rates. FlexiPay provides innovative financial inclusion features that enable consumers to manage budgets effectively and access essential goods through flexible payment options.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-5 rounded-lg border-t-4 border-flexipay-primary shadow-sm">
+            <h3 className="font-semibold text-flexipay-primary mb-3 text-lg">Business Integration Solutions</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Our system integrates physical retail operations with digital marketplaces through a unified POS system, inventory management, and expense tracking. This integration eliminates the need for multiple systems and reduces operational complexity while expanding market reach.
+            </p>
           </div>
-          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 shadow-sm">
-            <h3 className="font-semibold text-red-700 mb-3 text-xl">Digital Laggards</h3>
-            <p className="text-gray-700">Facing reduced market share, lower customer engagement, and limited growth potential.</p>
+          <div className="bg-white p-5 rounded-lg border-t-4 border-flexipay-accent shadow-sm">
+            <h3 className="font-semibold text-flexipay-accent mb-3 text-lg">Financial Inclusion Features</h3>
+            <p className="text-gray-700 leading-relaxed">
+              FlexiPay introduces innovative financial solutions, including credit-based purchasing for salaried individuals, budget management tools, and personalized shopping experiences that connect consumers with affordable essential goods at the right time.
+            </p>
           </div>
         </div>
-        <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow-sm">
-          <h3 className="font-semibold text-flexipay-primary mb-3 text-xl">Key Market Insights</h3>
-          <BulletPoint className="mb-3">
-            <span className="font-medium">85% of consumers</span> research products online before making any purchase
-          </BulletPoint>
-          <BulletPoint className="mb-3">
-            Many Pakistani businesses struggle to establish online presence due to limited resources and technical expertise
-          </BulletPoint>
-          <BulletPoint>
-            A significant portion of Pakistan's population faces economic hardships, making it difficult to afford basic necessities
-          </BulletPoint>
-        </div>
-        <div className="mt-6 bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 shadow-sm">
+        
+        <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 shadow-sm">
           <p className="font-medium text-flexipay-primary leading-relaxed">
-            FlexiPay bridges this gap by empowering traditional retail businesses with integrated online presence and providing a "buy now, pay later" solution for salaried consumers.
+            By leveraging cutting-edge technologies including React JS, Node JS, and Flutter, FlexiPay Bridge creates a comprehensive ecosystem that empowers businesses with digital tools and provides consumers with financial flexibility, contributing to sustainable economic development.
           </p>
         </div>
       </div>
     </Slide>,
 
-    // 2. Problem Statement
-    <Slide key="problem" title="2. Problem Statement" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+    // 2. Problem Statement - Converted to narrative paragraphs
+    <Slide key="problem-1" title="2. Problem Statement (Business Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
-        <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm mb-6">
-          <h3 className="font-semibold text-amber-700 mb-3 text-xl">Business Challenges</h3>
-          <BulletPoint className="mb-3">
-            Traditional retailers struggle to increase sales through a single platform, limiting growth potential
-          </BulletPoint>
-          <BulletPoint className="mb-3">
-            Online presence is currently too complex and expensive to establish and maintain
-          </BulletPoint>
-          <BulletPoint>
-            Limited scalability and customer growth without digital integration in today's market
-          </BulletPoint>
+        <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm">
+          <p className="text-gray-800 leading-relaxed mb-4">
+            Traditional retailers in Pakistan are facing significant operational challenges in today's digital economy. Many businesses struggle to increase their sales through a single platform, which substantially limits their growth potential and market reach. The current market offers few integrated solutions that can serve both physical and online sales channels simultaneously.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-4">
+            Establishing and maintaining an online marketplace presence has proven to be prohibitively complex and expensive for small to medium businesses. The technical expertise required, ongoing maintenance costs, and integration challenges create significant barriers to digital adoption, leaving many businesses unable to compete effectively in the online space.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Without proper digital integration in today's market, these businesses face severe limitations in scalability and customer growth. Furthermore, inefficient inventory and sales management systems lead to operational inefficiencies, stock discrepancies, and missed sales opportunities. Many businesses also struggle with proper income and expense management, lacking tools to effectively track financial performance and make data-driven decisions.
+          </p>
         </div>
-        
-        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500 shadow-sm mb-6">
-          <h3 className="font-semibold text-purple-700 mb-3 text-xl">Consumer Challenges</h3>
-          <BulletPoint className="mb-3">
-            Middle-class salaried consumers struggle to purchase essentials at month-end due to cash flow issues
-          </BulletPoint>
-          <BulletPoint>
-            Financial limitations lead to high-interest loans for basic needs, creating debt cycles
-          </BulletPoint>
-        </div>
-        
-        <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500 shadow-sm">
-          <h3 className="font-semibold text-emerald-700 mb-3 text-xl">Payment System Challenges</h3>
-          <BulletPoint className="mb-3">
-            Lack of centralized payment solutions leads to processing delays and inefficiencies
-          </BulletPoint>
-          <BulletPoint>
-            Restrictive terms and conditions hinder efficient cash flow management for both businesses and consumers
-          </BulletPoint>
+      </div>
+    </Slide>,
+    
+    // Consumer Challenges slide
+    <Slide key="problem-2" title="2. Problem Statement (Consumer Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
+      <div className="space-y-6">
+        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500 shadow-sm">
+          <p className="text-gray-800 leading-relaxed mb-4">
+            Pakistan's middle-class salaried consumers often struggle to purchase essential goods due to inconsistent cash flow and limited income. These financial constraints become particularly acute at month-end before receiving their next salary, creating cycles of hardship for families trying to meet basic needs.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-4">
+            When faced with financial shortfalls, many consumers are forced to rely on high-interest loans or informal credit systems to cover essential purchases. This dependency creates damaging debt cycles that can be difficult to escape, further compounding financial instability and reducing future purchasing power.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-4">
+            Consumers also face significant challenges in finding the best prices and deals across fragmented marketplaces. The time and effort required to compare options across multiple physical and online stores often leads to suboptimal purchasing decisions and unnecessary expenditure.
+          </p>
+          <p className="text-gray-800 leading-relaxed">
+            Most consumers lack effective tools for expense and budget management, making it difficult to track spending patterns or make informed financial decisions. Additionally, many face limited shopping options for essential goods, particularly in underserved areas where retail options are restricted and online delivery services are inadequate.
+          </p>
         </div>
       </div>
     </Slide>,
