@@ -125,7 +125,6 @@ const Index = () => {
   ];
 
   const slides = [
-    // Title Slide
     <Slide 
       key="title" 
       title="FlexiPay Bridge"
@@ -145,7 +144,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 1. Introduction Slide - Enhanced and expanded
     <Slide key="intro" title="1. Introduction" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <p className="text-lg leading-relaxed">
@@ -187,41 +185,44 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 2. Problem Statement - Business Challenges
     <Slide key="problem-1" title="2. Problem Statement (Business Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500 shadow-sm">
           <p className="text-gray-800 leading-relaxed mb-3">
-            Traditional retailers face limited growth potential through single-platform sales channels, unable to effectively reach broader markets or expand their customer base.
+            Traditional retailers face limited growth potential through single-platform sales channels, unable to effectively reach broader markets.
           </p>
           <p className="text-gray-800 leading-relaxed mb-3">
-            Establishing an online marketplace remains prohibitively complex and expensive for small to medium businesses, creating significant barriers to digital transformation.
+            Establishing an online marketplace remains prohibitively complex and expensive for small to medium businesses.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Current POS systems are isolated from online channels, creating disconnected inventory and sales data that leads to management inefficiencies.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Many businesses struggle with inefficient inventory management, inadequate sales tracking, and poor financial oversight, leading to missed opportunities and operational inefficiencies.
+            Many businesses struggle with inefficient inventory tracking and inadequate financial oversight, leading to missed opportunities.
           </p>
         </div>
       </div>
     </Slide>,
     
-    // Consumer Challenges slide
     <Slide key="problem-2" title="2. Problem Statement (Consumer Challenges)" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500 shadow-sm">
           <p className="text-gray-800 leading-relaxed mb-3">
-            Middle-class salaried consumers often struggle with essential purchases due to income constraints, particularly at month-end before their next paycheck.
+            Middle-class salaried consumers often struggle with essential purchases due to income constraints before their next paycheck.
           </p>
           <p className="text-gray-800 leading-relaxed mb-3">
-            Financial limitations lead many to rely on high-interest loans for basic needs, creating damaging debt cycles that further reduce purchasing power.
+            Financial limitations lead many to rely on high-interest loans for basic needs, creating damaging debt cycles.
+          </p>
+          <p className="text-gray-800 leading-relaxed mb-3">
+            Traditional POS systems offer limited payment options, forcing consumers to carry cash or cards with no flexibility for credit-based purchasing.
           </p>
           <p className="text-gray-800 leading-relaxed">
-            Consumers face challenges in price comparison, budget management, and access to essential goods, particularly in underserved areas with limited retail options.
+            Consumers face challenges in price comparison, budget management, and access to essential goods in underserved areas.
           </p>
         </div>
       </div>
     </Slide>,
 
-    // 3. Literature Review
     <Slide key="literature" title="3. Literature Review" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-4">
         <p className="text-lg mb-4">Comparative analysis of existing solutions in the market:</p>
@@ -242,7 +243,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 4. Problem Solution
     <Slide key="solution" title="4. Problem Solution" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 shadow-sm">
@@ -303,7 +303,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // Add a new slide for UN Sustainable Development Goals
     <Slide key="sdg" title="4.1 Contribution to UN Sustainable Development Goals" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <p className="text-lg">
@@ -331,7 +330,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 5. Modules and Work Division
     <Slide key="modules" title="5. Modules and Work Division" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-4">
         <p className="text-lg mb-4">The system is organized into the following core modules with team assignments:</p>
@@ -349,7 +347,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 6. Tools and Technologies
     <Slide key="technologies" title="6. Tools and Technologies" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -464,7 +461,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // 7. Mockups
     <Slide key="mockups" title="7. Mockups" titleClassName="text-2xl md:text-3xl font-bold text-flexipay-primary">
       <div className="space-y-6">
         <p className="text-lg mb-6">Preliminary interface designs for key system components:</p>
@@ -545,7 +541,6 @@ const Index = () => {
       </div>
     </Slide>,
 
-    // Thank You
     <Slide 
       key="thankyou" 
       title="Thank You"
